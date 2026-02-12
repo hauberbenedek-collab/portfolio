@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLC és Iparibusz Rendszerek</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 32px;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        header div {
+            flex-grow: 1;
+        }
+
+        header h1 {
+            margin: 0 0 8px 0;
+            color: #d6172a;
+        }
+
+        header p {
+            margin: 0;
+            color: #555;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 11px 24px;
+            background-color: #d6172a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button:hover {
+            background-color: #a02834;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 32px auto;
+            padding: 0 16px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            margin-bottom: 16px;
+            color: #d6172a;
+            border-bottom: 2px solid #d6172a;
+            padding-bottom: 8px;
+        }
+
+        section h3 {
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .project-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            border-left: 4px solid #d6172a;
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            margin: 16px 0;
+            border-radius: 10px;
+            box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .info-card {
+            background-color: #f9f9f9;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid #d6172a;
+        }
+
+        .info-card strong {
+            color: #d6172a;
+        }
+
+        ul {
+            margin: 8px 0;
+            padding-left: 24px;
+        }
+
+        ul li {
+            margin: 6px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 16px;
+            background-color: #f4f4f4;
+            margin-top: 32px;
+            border-top: 2px solid #ddd;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>PLC és Iparibusz Rendszerek</h1>
+            <p>Tantárgy portfólió - Projektgyűjtemény</p>
+        </div>
+        <nav class="header-nav">
+            <a href="../index.html" class="nav-button">← Vissza a Hubra</a>
+            <a href="#dugattyú" class="nav-button">Dugattyú</a>
+            <a href="#kliens" class="nav-button">Kliens PLC</a>
+            <a href="#parkoló" class="nav-button">Parkoló</a>
+            <a href="#szerver" class="nav-button">Szerver PLC</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Tantárgy Ismertetése</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <p><strong>Tantárgy:</strong> PLC és Iparibusz Rendszerek</p>
+                </div>
+                <div class="info-card">
+                    <p><strong>Típus:</strong> Gyakorlati projekt dokumentáció</p>
+                </div>
+                <div class="info-card">
+                    <p><strong>Célja:</strong> Ipari automatizálás alapjai</p>
+                </div>
+            </div>
+            <p>
+                Ez az oldal a PLC és Iparibusz Rendszerek tantárgyban végzett projektjeim dokumentációja. 
+                Az alábbi projektek az iparági automatizálás különböző aspektusait mutatják be, 
+                a szekvenciális logika vezérlésétől az elosztott rendszerek kommunikációjáig.
+            </p>
+        </section>
+
+        <section class="projects">
+            <h2>Projektek</h2>
+
+            <div class="project-container" id="dugattyú">
+                <h3>1. Dugattyú Vezérlés</h3>
+                <p><strong>Leírás:</strong> Pneumatikus dugattyú vezérlésének szimulációja és logikai programozása.</p>
+                <img src="dugattyú.PNG" alt="Dugattyú vezérlés projekt" class="project-image">
+                <ul>
+                    <li>Pneumatikus vezérlőelemek kezelése</li>
+                    <li>Szekvenciális logika implementálása</li>
+                    <li>Biztonsági funkcióintegrálása</li>
+                    <li>PLC alapú vezérlés</li>
+                </ul>
+            </div>
+
+            <div class="project-container" id="kliens">
+                <h3>2. Kliens PLC Rendszer</h3>
+                <p><strong>Leírás:</strong> Elosztott PLC hálózatban a kliens oldal megvalósítása és konfigurációja.</p>
+                <img src="kliensplc.PNG" alt="Kliens PLC rendszer" class="project-image">
+                <ul>
+                    <li>Iparibusz kommunikáció alapjai</li>
+                    <li>Hálózat konfigurálás és csatlakozás</li>
+                    <li>Adat küldés és fogadás</li>
+                    <li>Szinkronizálás szerver oldallal</li>
+                </ul>
+            </div>
+
+            <div class="project-container" id="parkoló">
+                <h3>3. Parkoló Ház Project</h3>
+                <p><strong>Leírás:</strong> Automatizált parkoló rendszer teljes szimulációja és vezérlése.</p>
+                <img src="parkoloházfeladat.PNG" alt="Parkoló ház feladat specifikáció" class="project-image">
+                <img src="parkolóházprogram.PNG" alt="Parkoló ház program logika" class="project-image">
+                <ul>
+                    <li>Bejáró és kijáró kapu vezérlés</li>
+                    <li>Hely detektor rendszer</li>
+                    <li>Elektronikus sorompó vezérlés</li>
+                    <li>Teljes rendszer szimulációja</li>
+                    <li>PLC létra diagramm logika</li>
+                </ul>
+            </div>
+
+            <div class="project-container" id="szerver">
+                <h3>4. Szerver PLC Rendszer</h3>
+                <p><strong>Leírás:</strong> Elosztott PLC hálózatban a szerver oldal implementációja.</p>
+                <img src="serverplc.PNG" alt="Szerver PLC rendszer" class="project-image">
+                <ul>
+                    <li>Szerver szerepkör a hálózatban</li>
+                    <li>Több kliens kezelés egyidejűleg</li>
+                    <li>Adat feldolgozás és valós idejű szinkronizálás</li>
+                    <li>Hálózati protokollok alkalmazása</li>
+                    <li>Redundancia és hiba kezelés</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="summary">
+            <h2>Tanulási Eredmények</h2>
+            <ul>
+                <li><strong>Ipari automatizálás:</strong> PLC programozás alapjainak megértése és alkalmazása</li>
+                <li><strong>Hálózati kommunikáció:</strong> Iparibusz protokollok és elosztott rendszerek ismerete</li>
+                <li><strong>Szimulációs technológiák:</strong> Virtuális ipari rendszerek modellezése és tesztelése</li>
+                <li><strong>Logikai tervezés:</strong> Szekvenciális és kombinációs logika implementálása</li>
+                <li><strong>Rendszerszemlélet:</strong> Komplex ipari folyamatok integrálása és koordinálása</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PLC és Iparibusz Rendszerek - Tantárgy Portfólió</p>
+    </footer>
+</body>
+</html>
