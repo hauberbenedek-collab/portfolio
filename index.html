@@ -3,147 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyári Gyakorlat - Nestle Purina Bük</title>
+    <title>Portfólió Hub - Hauber Benedek</title>
     <style>
-        
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header {
-    background-color: #f4f4f4;
-    padding: 32px;
-    border-bottom: 2px solid #ddd;
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #d6172a 0%, #a02834 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-header .logo {
-    max-width: 300px;
-    height: auto;
-    flex-shrink: 0;
-}
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
 
-header div {
-    flex-grow: 1;
-}
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            animation: slideDown 0.6s ease-out;
+        }
 
-.header-nav {
-    display: flex;
-    gap: 16px;
-}
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-.nav-button {
-    padding: 11px 24px;
-    background-color: #d6172a;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
-}
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
 
-.nav-button:hover {
-    background-color: #a02834;
-}
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
 
-main {
-    max-width: 800px;
-    margin: 32px auto;
-    padding: 0 16px;
-}
+        .subject-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.6s ease-out;
+        }
 
-section {
-    margin-bottom: 32px;
-}
+        .subject-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
 
-section h2 {
-    margin-bottom: 16px;
-    color: #333;
-}
+        .subject-card-header {
+            background: linear-gradient(135deg, #d6172a 0%, #a02834 100%);
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
 
-section h3 {
-    margin-top: 24px;
-    margin-bottom: 8px;
-    color: #555;
-}
+        .subject-card-header h2 {
+            font-size: 1.5em;
+            margin-bottom: 8px;
+        }
 
-.project-image {
-    max-width: 100%;
-    height: auto;
-    margin: 16px 0;
-    border-radius: 10px;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
-}
+        .subject-card-header p {
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
 
-footer {
-    text-align: center;
-    padding: 16px;
-    background-color: #f4f4f4;
-    margin-top: 32px;
-    border-top: 2px solid #ddd;
-}
+        .subject-card-content {
+            padding: 25px;
+        }
 
+        .subject-card-content p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .card-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #d6172a 0%, #a02834 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .card-button:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .subject-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 40px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        .header-logo {
+            max-width: 120px;
+            height: auto;
+            margin-right: 30px;
+            border-radius: 100px;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .subjects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <img src="Purina-Logo.png" alt="Nestle Purina Bük Logo" class="logo">
-        <div>
-            <h1>Nyári Gyakorlat</h1>
-            <p>Nestle Purina Bük</p>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Portfólió Logo" class="header-logo">
+            <div>
+                <h1>📚 Portfólió Hub</h1>
+                <p>Hauber Benedek - Tantárgy Projektjei</p>
+            </div>
+        </header>
+
+        <div class="subjects-grid">
+            <!-- PLC és Iparibusz Rendszerek -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">⚙️</div>
+                    <h2>PLC és Iparibusz Rendszerek</h2>
+                    <p>Ipari automatizálás alapjai</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Pneumatikus vezérlés, PLC programozás és elosztott iparibusz hálózatok 
+                        gyakorlati megvalósítása.
+                    </p>
+                    <a href="plcésbusz_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Hálózatok -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">🌐</div>
+                    <h2>Hálózatok</h2>
+                    <p>Casino hálózat szimulációja</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Komplex hálózati infrastruktúra megtervezése, IP-cím kezelés és 
+                        Cisco Packet Tracer szimulációja.
+                    </p>
+                    <a href="hálózat_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Webszerkesztés -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">🌐</div>
+                    <h2>Webszerkesztés</h2>
+                    <p>Nyári gyakorlat dokumentáció</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Nestle Purina Bükön végzett nyári gyakorlat dokumentációja: 
+                        mikrovezérlés és PLC programozás.
+                    </p>
+                    <a href="webszerk_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Számítógépes Szimuláció (ha van tartalma) -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">💻</div>
+                    <h2>Számítógépes Szimuláció</h2>
+                    <p>Szimulációs projektek</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Különféle szimulációs technológiák és modellek praktikus alkalmazása 
+                        ipari és mérnöki problémamegoldásban.
+                    </p>
+                    <a href="szamitogépesszim_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
         </div>
-        <nav class="header-nav">
-            <a href="#microcontroller" class="nav-button">Mikrovezérlés</a>
-            <a href="#plc" class="nav-button">PLC Programozás</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="info">
-            <h2>Projekt Információk</h2>
-            <p><strong>Cég:</strong> Nestle Hungária Kft.</p>
-            <p><strong>Időtartam:</strong> 1 hónap</p>
-            <p><strong>Típus:</strong> Nyári gyakorlat</p>
-        </section>
-
-        <section class="description">
-            <h2>
-                Ez az oldal a Nestle Purina Bükön töltött nyári gyakorlatom dokumentációja.
-            </h2>
-        </section>
-
-        <section class="experience">
-            <h2>Feladatok</h2>
-            
-            <h3 id="microcontroller">1. Hét: Mikrovezérlés</h3>
-            <p><strong>Téma:</strong> Automata hővezérlés rendszer</p>
-            <img src="images/mikrovez.png" alt="Mikrovezérlő projekt" title="Mikrovezérlő projekt" class="project-image">
-            <ul>
-                <li>Hőmérséklet és páratartalom mérés</li>
-                <li>Automata ventillátor vezérlés (hőmérséklet alapján)</li>
-                <li>Joystick vezérlés a ventilátor manuális forgatásához</li>
-                <li>LCD kijelző: hőmérséklet, páratartalom, ventilátor állapot</li>
-                <li>Hőmérséklet küszöbértékek: 20°C - 28°C</li>
-            </ul>
-
-            <h3 id="plc">2. Hét: PLC Programozás</h3>
-            <p><strong>Téma:</strong> Iparági automatizálás - Közlekedési lámpák vezérlése</p>
-            <ul>
-                <li>Közlekedési lámpák programozása létra nyelvben</li>
-                <li>Kereszteződés szimulációja több irányból érkező forgalommal</li>
-                <li>Időzítés beállítása: zöld, sárga, piros fázisok</li>
-                <li>PLC rendszer: Allan Bradley</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Nyári Gyakorlat</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Portfólió - Tantárgy Projektgyűjtemény - Vizsgabiztos Hozzáférés</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Az oldal tanári és vizsgabiztos felhasználásra készült.</p>
+        </footer>
+    </div>
 </body>
 </html>
-
