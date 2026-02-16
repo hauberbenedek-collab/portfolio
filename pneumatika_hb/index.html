@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumatika - Portfólió</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 32px;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        header div {
+            flex-grow: 1;
+        }
+
+        header h1 {
+            margin: 0 0 8px 0;
+            color: #d6172a;
+        }
+
+        header p {
+            margin: 0;
+            color: #555;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 11px 24px;
+            background-color: #d6172a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button:hover {
+            background-color: #a02834;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 32px auto;
+            padding: 0 16px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            margin-bottom: 16px;
+            color: #d6172a;
+            border-bottom: 2px solid #d6172a;
+            padding-bottom: 8px;
+        }
+
+        section h3 {
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .content-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            border-left: 4px solid #d6172a;
+        }
+
+        .placeholder {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+            font-style: italic;
+        }
+
+        .video-container {
+            margin-top: 15px;
+            padding: 0;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info p:first-child {
+            margin-top: 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .video-info p:last-child {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .header-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>💨 Pneumatika</h1>
+            <p>Szakterület: Pneumatikus Rendszerek és Vezérlés</p>
+        </div>
+        <nav class="header-nav">
+            <a href="../index.html" class="nav-button">← Vissza a Portfólióhoz</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tantárgy Áttekintése</h2>
+            <div class="content-container">
+                <p>
+                    A Pneumatika tantárgyat a 13. évfolyamban tanultuk. Az óra két fő részből állt:
+                    először az elméleti alapokat és számítást tanultuk, majd a gyakorlati részben 
+                    fizikai pneumatikus kapcsolásokat szereltunk fel a táblákra.
+                </p>
+                <h3>Fő tanulási témakörök:</h3>
+                <ul>
+                    <li><strong>Pneumatikus rajzjelek</strong></li>
+                    <li><strong>Pneumatikus rendszerek szerkesztése</strong> - Logikai kapcsolások megtervezése</li>
+                    <li><strong>Vezetékes módszer</strong></li>
+                    <li><strong>Pneumatikus alkatrészek</strong> - Szelepek, hengerek, váltaszelepoket</li>
+                    <li><strong>Logikai függvények realizalása pneumatikában</strong> - AND, OR, NOT műveletek</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projektek és Feladatok</h2>
+            <div class="content-container">
+                <h3>Elméleti rész:</h3>
+                <ul>
+                    <li>Pneumatikus rajzjelek felismerése és rajzolása</li>
+                    <li>Egyszerű logikai kapcsolások megtervezése papíron</li>
+                </ul>
+
+                <h3>Gyakorlati rész:</h3>
+                <ul>
+                    <li><strong>Feltételei:</strong> Az elméleti feladatok elsõ résziben „5―1ő"-es értékelés után lehetett gyakorlati részre menni</li>
+                    <li><strong>Fizikai felszerelés:</strong> Pneumatikus táblákon valós alkatrészek használata</li>
+                    <li><strong>Kapcsolások felraktatasa:</strong> Szelepek, hengerek, vezetékek felszerelése</li>
+                    <li><strong>Logikai függvények megvalósítása:</strong> AND, OR, NOT, NOR, NAND műveletek</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Pneumatikus Diagramok és Gyakorlati Megvalósítások</h2>
+            <div class="content-container">
+                <h3>Tanult rajzjelek:</h3>
+                <ul>
+                    <li>Kompresszor</li>
+                    <li>Szelepek (átváltó, felépítő, stb.)</li>
+                    <li>Hengerek (egyenletes, kétoldali működésű)</li>
+                    <li>Nyomásmérő</li>
+                    <li>Logikai szimbólumok</li>
+                </ul>
+
+                <h3>Gyakorlati kapcsolások:</h3>
+                        <p>Autómata Kapcsolás</p>
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1a4wMuUL5e7_LsH0hjrVGF3ziNdlAzUPw/preview" style="width: 100%; height: 480px; border: none; border-radius: 8px;" allow="autoplay"></iframe>
+                    <div class="video-info">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portfólió - Pneumatika</p>
+    </footer>
+</body>
+</html>

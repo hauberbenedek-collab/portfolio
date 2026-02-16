@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT - Portfólió</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 32px;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        header div {
+            flex-grow: 1;
+        }
+
+        header h1 {
+            margin: 0 0 8px 0;
+            color: #d6172a;
+        }
+
+        header p {
+            margin: 0;
+            color: #555;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 11px 24px;
+            background-color: #d6172a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button:hover {
+            background-color: #a02834;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 32px auto;
+            padding: 0 16px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            margin-bottom: 16px;
+            color: #d6172a;
+            border-bottom: 2px solid #d6172a;
+            padding-bottom: 8px;
+        }
+
+        section h3 {
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .content-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            border-left: 4px solid #d6172a;
+        }
+
+        .placeholder {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .header-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>📡 IoT</h1>
+            <p>Szakterület: Internet of Things Alkalmazások</p>
+        </div>
+        <nav class="header-nav">
+            <a href="../index.html" class="nav-button">← Vissza a Portfólióhoz</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tantárgy Áttekintése</h2>
+            <div class="content-container">
+                <p>Ebben a tantárgyban gyakorlatorientált IoT-projekteken dolgoztunk, amelyek során a következőket tanultuk és valósítottuk meg:</p>
+                <ul>
+                    <li>Raspberry Pi Pico programozása (MicroPython/C) és egyszerű elektronikai perifériák vezérlése.</li>
+                    <li>Linux alapú virtuális szerver felállítása és alapvető rendszerszintű konfigurációk elvégzése.</li>
+                    <li>Webszerver telepítése és konfigurálása a projektek publikálásához (pl. tesztoldalak, REST-endpontok).</li>
+                    <li>Node-RED használata vizuális adatfolyamokhoz, eszközök integrálásához és gyors prototipizáláshoz.</li>
+                </ul>
+                <p>A tantárgy célja volt, hogy megtanuljuk az IoT-prototípusok teljes munkafolyamatát: a beágyazott eszköz programozásától a szerver- és hálózati beállításokig, valamint az adatok vizualizálásáig és egyszerű automatizálásokig.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projektek és Feladatok</h2>
+            <div class="content-container">
+                <p>Az órák során több gyakorlati projektet és kisebb feladatot valósítottunk meg. Néhány példa:</p>
+                <ul>
+                    <li><strong>Raspberry Pi Pico — hőmérséklet- és páratartalom-érzékelő:</strong> MicroPython használata, DHT-szenzor, adatok MQTT-en történő továbbítása.</li>
+                    <li><strong>Node-RED dashboard:</strong> MQTT-adatok fogadása, egyszerű vizualizáció és vezérlőfelületek készítése (gombok, kapcsolók, riasztások).</li>
+                    <li><strong>Linux virtuális szerver telepítése:</strong> szolgáltatások beállítása (pl. nginx, mosquitto).</li>
+                    <li><strong>Hálózati és biztonsági gyakorlatok:</strong> alapvető tűzfal- és portbeállítások, helyi hálózati integrációk.</li>
+                </ul>
+                <p>Ezek a feladatok célja az volt, hogy a beágyazott eszközök programozásától a szerveroldali és hálózati beállításokig bezárólag átfogó tapasztalatot szerezzünk.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>IoT Eszközök és Megoldások</h2>
+            <div class="content-container">
+                <p>Az alábbi eszközöket és szoftveres megoldásokat használtuk és ismertük meg:</p>
+                <ul>
+                    <li><strong>Raspberry Pi Pico</strong> — MicroPython vagy C használata beágyazott fejlesztéshez.</li>
+                    <li><strong>MQTT (pl. Mosquitto)</strong> — könnyű üzenetközvetítő protokoll szenzoradatok továbbításához.</li>
+                    <li><strong>Node-RED</strong> — vizuális adatfolyam-szerkesztő integrációkhoz és dashboardokhoz.</li>
+                    <li><strong>Szenzorok:</strong> DHT22 (hőmérséklet/páratartalom), BMP280 (nyomás/magasság), HC-SR04 (távolság).</li>
+                    <li><strong>Aktuátorok:</strong> relé modulok, motorvezérlés (PWM) kisebb automatizálási feladatokhoz.</li>
+                    <li><strong>Webszerverek és API-k:</strong> nginx, Node.js/Express alapú egyszerű szolgáltatások a mérések publikálásához.</li>
+                </ul>
+                <p>Ez a kombináció lehetővé teszi gyors prototípus-készítést és a valós idejű adatok egyszerű megjelenítését illetve vezérlését.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portfólió - IoT</p>
+    </footer>
+</body>
+</html>

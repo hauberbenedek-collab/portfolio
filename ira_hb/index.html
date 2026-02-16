@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irányítástechnika - Portfólió</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 32px;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        header div {
+            flex-grow: 1;
+        }
+
+        header h1 {
+            margin: 0 0 8px 0;
+            color: #d6172a;
+        }
+
+        header p {
+            margin: 0;
+            color: #555;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 11px 24px;
+            background-color: #d6172a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button:hover {
+            background-color: #a02834;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 32px auto;
+            padding: 0 16px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            margin-bottom: 16px;
+            color: #d6172a;
+            border-bottom: 2px solid #d6172a;
+            padding-bottom: 8px;
+        }
+
+        section h3 {
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .content-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            border-left: 4px solid #d6172a;
+        }
+
+        .placeholder {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .header-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>🎛️ Irányítástechnika</h1>
+            <p>Szakterület: Szabályozás és Irányítási Rendszerek</p>
+        </div>
+        <nav class="header-nav">
+            <a href="../index.html" class="nav-button">← Vissza a Portfólióhoz</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tantárgy Áttekintése</h2>
+            <div class="content-container">
+                <p>
+                    Az Irányítstechnika tantárgy fő fókusza a szenzortechnika, szabályozási körök 
+                    volt. Megtanultuk, hogy hogyan működnek a különféle 
+                    útmérő szenzorok, és hogyan alkalmazhatóak.
+                </p>
+                <h3>Fő tanulási témakörök:</h3>
+                <ul>
+                    <li><strong>Szenzortechnika</strong> - Relatív és abszólút útmérő szenzorok</li>
+                    <li><strong>Folyamatirányítás</strong> - Ipari szabályozók alkalmazása</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Beadandó: Relatív vs Abszolút Útmérő Szenzorok</h2>
+            <div class="content-container">
+                <h3>Relatív Úttmérő szenzorok:</h3>
+                <ul>
+                    <li><strong>Működés:</strong> Megérzik az elmozdulás nagyságát, de nem az abszólút pozíciót</li>
+                    <li><strong>Referenciapont:</strong> Kiinduláshoz képest mérik a mozgást</li>
+                    <li><strong>Példa:</strong> Inkrementális enkóder, ellenállás-potenciométer</li>
+                    <li><strong>Hátránya:</strong> Hálózatkimaradás után elveszti a pozíció-információt</li>
+                    <li><strong>Előnye:</strong> Olcsóbb és egyszerűbb szerkezet</li>
+                </ul>
+
+                <h3>Abszolút Úttmérő szenzorok:</h3>
+                <ul>
+                    <li><strong>Működés:</strong> Megérzik a pontos abszolút pozíciót</li>
+                    <li><strong>Referenciapont:</strong> Rögzített kiindulási pont és skála alapján határozzák meg</li>
+                    <li><strong>Példa:</strong> Abszolút enkóder, LVDT szenzor</li>
+                    <li><strong>Előnye:</strong> Hálózatkimaradás után is ismeri a pontos pozíciót</li>
+                    <li><strong>Hátránya:</strong> Drágább és bonyolultabb szerkezet</li>
+                </ul>
+
+                <h3>Fö különbségek:</h3>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                    <tr style="background-color: #d6172a; color: white;">
+                        <th style="border: 1px solid #ddd; padding: 10px;">Jellemző</th>
+                        <th style="border: 1px solid #ddd; padding: 10px;">Relatív</th>
+                        <th style="border: 1px solid #ddd; padding: 10px;">Abszolút</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 10px;"><strong>Pozíció</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 10px;">Relatív mozgás</td>
+                        <td style="border: 1px solid #ddd; padding: 10px;">Pontos abszólút pozíció</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="border: 1px solid #ddd; padding: 10px;"><strong>Áramkimaradás után</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 10px;">Adatok vesznek el</td>
+                        <td style="border: 1px solid #ddd; padding: 10px;">Adatokat megőrzik</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 10px;"><strong>Ár</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 10px;">Olcsóbb</td>
+                        <td style="border: 1px solid #ddd; padding: 10px;">Drágább</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="border: 1px solid #ddd; padding: 10px;"><strong>Alkalmazás</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 10px;">Egyszerű mozgások</td>
+                        <td style="border: 1px solid #ddd; padding: 10px;">Kritikus pozíció-szab.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    <footer>
+        <p>&copy; 2026 Portfólió - Irányítástechnika</p>
+    </footer>
+</body>
+</html>

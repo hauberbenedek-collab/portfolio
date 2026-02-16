@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adatbáziskezelés - Portfólió</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 32px;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        header div {
+            flex-grow: 1;
+        }
+
+        header h1 {
+            margin: 0 0 8px 0;
+            color: #d6172a;
+        }
+
+        header p {
+            margin: 0;
+            color: #555;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 11px 24px;
+            background-color: #d6172a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button:hover {
+            background-color: #a02834;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 32px auto;
+            padding: 0 16px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            margin-bottom: 16px;
+            color: #d6172a;
+            border-bottom: 2px solid #d6172a;
+            padding-bottom: 8px;
+        }
+
+        section h3 {
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .content-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            border-left: 4px solid #d6172a;
+        }
+
+        .placeholder {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .header-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>🗄️ Adatbáziskezelés</h1>
+            <p>Szakterület: Adatbázisok és Adatkezelés</p>
+        </div>
+        <nav class="header-nav">
+            <a href="../index.html" class="nav-button">← Vissza a Portfólióhoz</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tantárgy Áttekintése</h2>
+            <div class="content-container">
+                <p>
+                    Az Adatbáziskezelés tantárgy alatt a relaciós adatbázisok gyakorlati alkalmazását tanultuk meg.
+                    Kezdetben <strong>Microsoft Access</strong>-ben dolgoztunk az adatbázisok szerkezetén és tervezésén,
+                    majd áttértünk az <strong>SQL</strong> nyelvre, amelyet <strong>MySQL Workbench</strong>-ben gyakoroltunk.
+                </p>
+                <h3>Fő tanulási témakörök:</h3>
+                <ul>
+                    <li><strong>Microsoft Access</strong> - Adatbázis szerkezete, táblák, jellemzők</li>
+                    <li><strong>SQL alapok</strong> - SELECT, INSERT, UPDATE, DELETE műveletek</li>
+                    <li><strong>MySQL Workbench</strong> - Adatbázis környezet és SQL nyelv használata</li>
+                    <li><strong>Lekérdezések</strong> - JOIN, WHERE, ORDER BY, GROUP BY</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Gyakorlatok és Kérdések</h2>
+            <div class="content-container">
+                <h3>SQL műveletek:</h3>
+                <ul>
+                    <li><strong>SELECT</strong> - Táblákból adatok kiválasztása</li>
+                    <li><strong>WHERE</strong> - Feltételek alapján szűkítés</li>
+                    <li><strong>JOIN</strong> - Táblák összekötése relaciók alapján</li>
+                    <li><strong>INSERT, UPDATE, DELETE</strong> - Adatok módosítása</li>
+                    <li><strong>GROUP BY és aggregációk</strong> - Adatok összegzése (COUNT, SUM, AVG)</li>
+                    <li><strong>ORDER BY</strong> - Eredmények rendezése</li>
+                </ul>
+                <h3>Access gyakorlatok:</h3>
+                <ul>
+                    <li>Adatbázis szerkezetének megtervezése</li>
+                    <li>Táblák létrehozása és kapcsolatok definiálása</li>
+                    <li>Egyszerű és bonyolult lekerdézések készítése</li>
+                    <li>Jelentések generálása</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Adatbázis Szerkezete</h2>
+            <div class="content-container">
+                </ul>
+                <div style="margin-top: 20px; padding: 15px; background-color: #e8e8e8; border-radius: 5px;">
+                    <h3 style="margin-top: 0; color: #333;">MySQL Workbench projekt:</h3>
+                    <img src="adatbáziskód.png" alt="MySQL Workbench adatbáziscode" style="max-width: 100%; height: auto; border-radius: 5px; margin-top: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portfólió - Adatbáziskezelés</p>
+    </footer>
+</body>
+</html>
