@@ -35,7 +35,6 @@
             text-align: center;
             color: white;
             margin-bottom: 50px;
-            animation: slideDown 0.6s ease-out;
         }
 
         header h1 {
@@ -61,13 +60,6 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        .subject-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
         }
 
         .subject-card-header {
@@ -105,17 +97,11 @@
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            transition: all 0.3s ease;
             width: 100%;
             text-align: center;
             border: none;
             cursor: pointer;
             font-size: 1em;
-        }
-
-        .card-button:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            transform: scale(1.02);
         }
 
         .subject-icon {
@@ -142,27 +128,7 @@
             border-radius: 100px;
         }
 
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
         @media (max-width: 768px) {
             header h1 {
@@ -235,7 +201,7 @@
                 </div>
             </div>
 
-            <!-- Számítógépes Szimuláció (ha van tartalma) -->
+            <!-- Számítógépes Szimuláció -->
             <div class="subject-card">
                 <div class="subject-card-header">
                     <div class="subject-icon">💻</div>
@@ -244,19 +210,159 @@
                 </div>
                 <div class="subject-card-content">
                     <p>
-                        Különféle szimulációs technológiák és modellek praktikus alkalmazása 
-                        ipari és mérnöki problémamegoldásban.
+                        Tina programban készült szimulációs projektek.
                     </p>
                     <a href="szamitogépesszim_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Villamosalapismeretek -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">⚡</div>
+                    <h2>Villamosalapismeretek</h2>
+                    <p>Elektrotechnika alapjai</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Villamos áramkörök, komponensek és jelenségek 
+                        elméleti alapjai és gyakorlati alkalmazásai.
+                    </p>
+                    <a href="villamosalapism_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Programfejlesztés -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">💻</div>
+                    <h2>Programfejlesztés</h2>
+                    <p>Szoftverfejlesztés és programozás</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Főként Python nyelven írt szoftverfejlesztési projektek, kódminták és alkalmazások
+                    </p>
+                    <a href="programfejlesztes_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Pneumatika -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">💨</div>
+                    <h2>Pneumatika</h2>
+                    <p>Pneumatikus rendszerek és vezérlés</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Sűrített levegős hajtások, vezérlések és logikai funkcionalitások 
+                        ipari automatizálásban.
+                    </p>
+                    <a href="pneumatika_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Mikrovezérlés -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">🤖</div>
+                    <h2>Mikrovezérlés</h2>
+                    <p>Mikrovezérlő alkalmazások</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Arduino, Raspberry Pi és egyéb mikrovezérlők programozása és alkalmazása 
+                        beágyazott rendszerekben.
+                    </p>
+                    <a href="mikrovez_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Irányítástechnika -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">🎛️</div>
+                    <h2>Irányítástechnika</h2>
+                    <p>Szabályozás és irányítási rendszerek</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Szabályozási körök, Érzékelők 
+                        és irányítási rendszerek tervezése és megvalósítása.
+                    </p>
+                    <a href="ira_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- IoT -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">📡</div>
+                    <h2>IoT</h2>
+                    <p>Internet of Things alkalmazások</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Csatlakoztatott eszközök, szenzorháló és felhőalapú megoldások 
+                        az Internet of Things világában.
+                    </p>
+                    <a href="iot_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Digitális Áramkör -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">🔌</div>
+                    <h2>Digitális Áramkör</h2>
+                    <p>Digitális elektronika</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Logikai kapuk, áramkörök tervezése és megvalósítása.
+                    </p>
+                    <a href="digaramkor_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Analóg Áramkör -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">🌊</div>
+                    <h2>Analóg Áramkör</h2>
+                    <p>Analóg elektronika</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Praktikus analóg áramköri gyakorlatok: tranzisztoros kapcsolások, 
+                        csillárkapcsoló-rendszerek, forrasztás és villanykapcsoló-konfigurációk 
+                        megvalósítása az iskolai laboratóriumban.
+                    </p>
+                    <a href="anaaramkor_hb/index.html" class="card-button">Projekt megtekintése →</a>
+                </div>
+            </div>
+
+            <!-- Adatbáziskezelés -->
+            <div class="subject-card">
+                <div class="subject-card-header">
+                    <div class="subject-icon">🗄️</div>
+                    <h2>Adatbáziskezelés</h2>
+                    <p>Adatbázisok és adatkezelés</p>
+                </div>
+                <div class="subject-card-content">
+                    <p>
+                        Relációs adatbázisok, SQL és adatmodellek tervezése, 
+                        optimalizálás és adatok biztonsága.
+                    </p>
+                    <a href="adatbaziskez_hb/index.html" class="card-button">Projekt megtekintése →</a>
                 </div>
             </div>
         </div>
 
         <footer>
-            <p>&copy; 2025 Portfólió - Tantárgy Projektgyűjtemény - Vizsgabiztos Hozzáférés</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Az oldal tanári és vizsgabiztos felhasználásra készült.</p>
+            <p>&copy; 2026 Portfólió - Tantárgy Projektgyűjtemény</p>
         </footer>
     </div>
 </body>
 </html>
-
