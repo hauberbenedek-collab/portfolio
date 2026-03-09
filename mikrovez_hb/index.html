@@ -94,6 +94,24 @@
             font-style: italic;
         }
 
+        .image-slot {
+            text-align: center;
+            margin: 16px 0;
+        }
+
+        .image-slot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        }
+
+        .image-slot .caption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 8px;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -134,29 +152,131 @@
         <section>
             <h2>Tantárgy Áttekintése</h2>
             <div class="content-container">
-                <div class="placeholder">
-                    📝 Az anyag hamarosan feltöltésre kerül...
+                <div class="image-slot">
                 </div>
+
+                <p>A tantárgy célja a mikrovezérlők alapjainak gyakorlati elsajátítása: bemeneti/kimeneti kezelése, egyszerű perifériavezérlés és kis rendszerek prototípus készítése Arduino platformon.</p>
             </div>
         </section>
 
         <section>
             <h2>Projektek és Feladatok</h2>
             <div class="content-container">
-                <div class="placeholder">
-                    📁 A projektek hamarosan feltöltésre kerülnek...
+                <div class="image-slot">
                 </div>
+
+                <h3>Roulette gép (csapatprojekt)</h3>
+                <p>A csapatunk (3 fő) az év végén egy működő roulette játékgépet épített: az eszközt egy <strong>Arduino Nano</strong> vezérli. A megjelenítés LED mátrixon keresztül történik, a hangot buzzer adja, a beavatkozás gombokkal működik. A LED-eket mátrix kapcsolással, tartós forrasztással rögzítettük, a házat 3D nyomtatással készítettük.</p>
+
+                <h4>Főbb komponensek</h4>
+                <ul>
+                    <li>Arduino Nano</li>
+                    <li>LED mátrix (multiplexelt vezérlés)</li>
+                    <li>Buzzer, nyomógombok</li>
+                    <li>3D nyomtatott doboz</li>
+                </ul>
+
             </div>
         </section>
 
-        <section>
-            <h2>Kódok és Programok</h2>
-            <div class="content-container">
-                <div class="placeholder">
-                    💾 A programok hamarosan feltöltésre kerülnek...
+                <section>
+                        <h2>Programok és Képek</h2>
+                        <div class="content-container">
+                            <h2>Mikrovezérlő Project Előlről</h2>
+
+                        <div>
+                    <iframe src="https://drive.google.com/file/d/1i6BkWE4UHu9oJD8RmumxmLFH52PF-Bpl/preview" style="width: 100%; height: 480px; border: none; border-radius: 8px;" allow="autoplay"></iframe>
+                    <div >
+                    </div>
                 </div>
-            </div>
-        </section>
+<h2>Mikrovezérlő Project Hátúlról</h2>
+
+                                        <div>
+                    <iframe src="https://drive.google.com/file/d/1WPu-l2fnJJ1ysuT4wbyiZIRA0s9gydYb/preview" style="width: 100%; height: 480px; border: none; border-radius: 8px;" allow="autoplay"></iframe>
+                    <div>
+                    </div>
+                </div>
+
+<h2>Arduino Kód</h2>
+                                <details>
+                                        <summary><strong>Megtekintés: Arduino code.txt</strong></summary>
+        <pre style="background-color: #333; color: white; padding-left: 10px; 
+        border: 20px solid #444; border-radius: 10px;"><code>
+
+#define PushButton 12
+
+#define Click A5
+#define ZeroLed 11
+int quarter = A1; 
+int led; 
+bool CCW = true; 
+void setup() {
+    for (int i = 2; i <= 11; i++) pinMode(i, OUTPUT);
+    pinMode(PushButton, INPUT_PULLUP);
+    for (int a = A1; a <= A5; a++) pinMode(a, OUTPUT); 
+    for (int nowmber = 1; nowmber < 4; nowmber++)
+        for (int i = 2; i <= 10; i++) { 
+            digitalWrite(i, HIGH);
+            delay(200 - nowmber * 40 - (i - 2) * 5);
+            digitalWrite(i, LOW);
+        }
+    randomSeed(analogRead(A0)); 
+    led = random(2, 11); quarter = random(A1, A5); 
+    for (int a = A1; a <= A4; a++) digitalWrite(a, a != quarter); digitalWrite(led, HIGH); 
+}
+
+void loop() {
+    while (digitalRead(PushButton)); 
+    unsigned long now = millis();
+    while (!digitalRead(PushButton));
+    unsigned long tijd = millis() - now;
+    int Steps = 37 + random(18); 
+    if (tijd > 500) Steps *= 2;  
+    if (tijd > 5000) Steps *= 2.01;
+    int Stap = 1;
+    while (Stap < Steps) {
+        Stap++;
+        digitalWrite(led, LOW);
+        if (CCW) {
+            led++;
+            if (led > 10) {
+                if (quarter == A4) {
+                    if (led > 11) {
+                        quarter = A1;
+                        led = 2;
+                    }
+                }
+                else {
+                    led = 2;
+                    quarter++;
+                }
+            }
+        }
+        else { 
+            led--;
+            if (led < 2) {
+                if (quarter == A1) {
+                    led = ZeroLed;
+                    quarter = A4;
+                }
+                else {
+                    led = 10; 
+                    quarter--;
+                }
+            }
+        }
+        for (int a = A1; a <= A4; a++) digitalWrite(a, a != quarter); 
+        digitalWrite(led, HIGH);
+        digitalWrite(Click, HIGH); delayMicroseconds(40); digitalWrite(Click, LOW);
+        unsigned int delaytijd = 40 + Stap * 5;
+        if (tijd > 500) delaytijd /= 2;
+        delay(delaytijd);
+    }
+    CCW = !CCW;
+}</code></pre>
+                                </details>
+                        </div>
+                </section>
     </main>
 
     <footer>

@@ -142,6 +142,28 @@
             margin-top: 0;
         }
 
+        .button-container {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .project-button {
+            padding: 11px 24px;
+            background-color: #d6172a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+
+        .project-button:hover {
+            background-color: #a02834;
+        }
+
         footer {
             text-align: center;
             padding: 16px;
@@ -160,8 +182,6 @@
         </div>
         <nav class="header-nav">
             <a href="../index.html" class="nav-button">← Vissza a Hubra</a>
-            <a href="#aramkor" class="nav-button">Áramkör Mérése</a>
-            <a href="#meres" class="nav-button">Mérési Adatok</a>
         </nav>
     </header>
 
@@ -184,53 +204,14 @@
                 dokumentációja. A gyakorlatok célja az elektrotechnika alapjainak megértése és 
                 alkalmazása szimulációs szoftverek segítségével.
             </p>
-        </section>
-
-        <section id="aramkor">
-            <h2>1. Feladat: Komplex Áramkör Mérése</h2>
-            
-            <div class="project-container">
-                <h3>Áramkör Leírása</h3>
-                <p>
-                    Egy összetett elektromos áramkör teljes szimulációja és elemzése. 
-                    Az áramkör különböző alkatrészeket tartalmaz: ellenállásokat, 
-                    feszültségforrásokat és mérőeszközöket.
-                </p>
-
-                <h3>Áramkör Diagramma</h3>
-                <img src="komolexaramkormerese.PNG" alt="Komplex áramkör szimulációja" class="project-image">
-                
-                <h3>Áramkör és Táblázat</h3>
-                <img src="aramkoréstablazat.PNG" alt="Áramkör összetevői és táblázat" class="project-image">
+            <div class="button-container">
+                <a href="komplexáramkör.html" class="project-button">Komplexáramkör</a>
             </div>
-
-            <div class="project-container" id="meres">
-                <h3>Mérési Eredmények és Adatok</h3>
-                <p>
-                    Az alábbi mérések az áramkörön végzett valós szimulációs 
-                    adatokból származnak. A mérések azt mutatják, hogy az 
-                    áramkör a tervezett körülmények között hogyan viselkedik.
-                </p>
-
-                <div class="image-grid">
-                    <div>
-                        <img src="értékek.PNG" alt="Mérési értékek - 1. rész" class="project-image">
-                    </div>
-                    <div>
-                        <img src="értékek2.PNG" alt="Mérési értékek - 2. rész" class="project-image">
-                    </div>
+            <div class="button-container">    
+            <a href="egyutasegyenir.html" class="project-button">Egyutas és Egyenirányító</a>
                 </div>
-
-                <div class="measurement-data">
-                    <h4>📊 Mérés Összefoglalása</h4>
-                    <ul>
-                        <li>Feszültségmérés az áramkör különböző pontjain</li>
-                        <li>Árammérés az ágakban</li>
-                        <li>Teljesítményszámítás</li>
-                        <li>Ohm-törvény alkalmazása</li>
-                        <li>Kirchhoff-törvények ellenőrzése</li>
-                    </ul>
-                </div>
+                <div class="button-container">
+                <a href="kétutasegyenir.html" class="project-button">Kétutas és Egyenirányító</a>
             </div>
         </section>
 
@@ -245,10 +226,10 @@
                 <li><strong>Hibaanalízis:</strong> Mérési pontatlanságok és eltérések vizsgálata</li>
             </ul>
         </section>
-    </main>
+    </main> 
 
     <footer>
-        <p>&copy; 2025 Számítógépes Szimuláció - Tantárgy Portfólió</p>
+        <p>&copy; 2026 Számítógépes Szimuláció - Tantárgy Portfólió</p>
     </footer>
 </body>
 </html>

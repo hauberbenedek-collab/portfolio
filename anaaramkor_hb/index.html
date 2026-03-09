@@ -94,6 +94,20 @@
             font-style: italic;
         }
 
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -135,17 +149,17 @@
             <h2>Tantárgy Áttekintése</h2>
             <div class="content-container">
                 <p>
-                    Az Analóg Áramköri tantárgyban (9-10. évfolyam) az alapvető elektronikai komponensek 
+                    Az Analóg Áramköri tantárgyban (11. évfolyam) az alapvető elektronikai komponensek 
                     és azok praktikus alkalmazása volt a fő téma. Tanulóként különféle analóg áramköri 
                     kapcsolásokat szereltünk össze, és megtanultuk a villamos komponensek alapvető működési 
                     elvét.
                 </p>
                 <h3>Tanult témakörök:</h3>
                 <ul>
-                    <li><strong>Tranzisztorok alkalmazása</strong> - Bipoláris tranzisztorok a gyakorlatban</li>
+                    <li><strong>Tranzisztorok alkalmazása</strong></li>
                     <li><strong>Villanykapcsoló-rendszerek</strong> - Csillárkapcsolók és más kapcsolási topológiák</li>
-                    <li><strong>Forrasztás és mechanikai szerelés</strong> - Elektronikai komponensek integrálása</li>
-                    <li><strong>Analóg jelátalakítás</strong> - Alapvető érők és jelalakítók</li>
+                    <li><strong>Forrasztás és mechanikai szerelés</strong></li>
+                    <li><strong>Analóg jelátalakítás</strong></li>
                 </ul>
             </div>
         </section>
@@ -177,6 +191,16 @@
                     <li>Bipoláris tranzisztor alapú jelerősítő</li>
                     <li>Forrasztott PCB-re integrált alkatrészek</li>
                 </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Labor Fotók</h2>
+            <div class="content-container">
+                <div class="image-gallery">
+                    <img src="IMG_4676.png" alt="Labor fotó 1">
+                    <img src="IMG_4677.png" alt="Labor fotó 2">
+                </div>
             </div>
         </section>
     </main>

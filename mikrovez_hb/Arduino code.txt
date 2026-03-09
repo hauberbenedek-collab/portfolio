@@ -1,0 +1,74 @@
+// Roulette, European Wheel
+// c(2017) Th.M. Hupkens. Tested with an Arduino nano
+
+#define PushButton 12
+
+#define Click A5
+#define ZeroLed 11
+int quarter = A1; // Keeps track of in which quarter the current led is
+int led; // Keeps track of which led is ON
+bool CCW = true; // Counter clockwise
+void setup() {
+  for (int i = 2; i <= 11; i++) pinMode(i, OUTPUT);
+  pinMode(PushButton, INPUT_PULLUP);
+  for (int a = A1; a <= A5; a++) pinMode(a, OUTPUT); // LOW = ON
+  for (int nowmber = 1; nowmber < 4; nowmber++)
+    for (int i = 2; i <= 10; i++) { // Animation when wheel starts up
+      digitalWrite(i, HIGH);
+      delay(200 - nowmber * 40 - (i - 2) * 5);
+      digitalWrite(i, LOW);
+    }
+  randomSeed(analogRead(A0)); // Initialise the random nowmber generator
+  led = random(2, 11); quarter = random(A1, A5); // choose led from 1 to 10; choose quarter from A1 to A4
+  for (int a = A1; a <= A4; a++) digitalWrite(a, a != quarter); digitalWrite(led, HIGH); 
+}
+
+void loop() {
+  while (digitalRead(PushButton)); 
+  unsigned long now = millis();
+  while (!digitalRead(PushButton));
+  unsigned long tijd = millis() - now;
+  int Steps = 37 + random(18); // For the time being
+  if (tijd > 500) Steps *= 2;  // Pressing the push button more than half a second gives a longer roll
+  if (tijd > 5000) Steps *= 2.01;
+  int Stap = 1;
+  while (Stap < Steps) {
+    Stap++;
+    digitalWrite(led, LOW);
+    if (CCW) {
+      led++;
+      if (led > 10) {
+        if (quarter == A4) {
+          if (led > 11) {
+            quarter = A1;
+            led = 2;
+          }
+        }
+        else {
+          led = 2;
+          quarter++;
+        }
+      }
+    }
+    else { // if NOT counter clockwise
+      led--;
+      if (led < 2) {
+        if (quarter == A1) {
+          led = ZeroLed;
+          quarter = A4;
+        }
+        else {
+          led = 10; 
+          quarter--;
+        }
+      }
+    }
+    for (int a = A1; a <= A4; a++) digitalWrite(a, a != quarter); // if a is not the current quarter then a -> HIGH else a -> LOW
+    digitalWrite(led, HIGH);
+    digitalWrite(Click, HIGH); delayMicroseconds(40); digitalWrite(Click, LOW);
+    unsigned int delaytijd = 40 + Stap * 5;
+    if (tijd > 500) delaytijd /= 2;
+    delay(delaytijd);
+  }
+  CCW = !CCW;
+}
