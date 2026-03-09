@@ -172,13 +172,97 @@
         </section>
 
         <section>
-            <h2>Adatbázis Szerkezete</h2>
-            <div class="content-container">
-                </ul>
-                <div style="margin-top: 20px; padding: 15px; background-color: #e8e8e8; border-radius: 5px;">
-                    <h3 style="margin-top: 0; color: #333;">MySQL Workbench projekt:</h3>
-                    <img src="adatbáziskód.png" alt="MySQL Workbench adatbáziscode" style="max-width: 100%; height: auto; border-radius: 5px; margin-top: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                </div>
+<h2>MySQL Megvalósítás</h2>
+                                <details>
+                                        <summary><strong>Megtekintés:</strong></summary>
+        <pre style="background-color: #333; color: white; padding-left: 10px; 
+        border: 20px solid #444; border-radius: 10px;"><code>
+CREATE DATABASE roulette;
+USE roulette;
+
+CREATE TABLE jatekos (
+    jatekos_id INT AUTO_INCREMENT PRIMARY KEY,
+    nev VARCHAR(100) NOT NULL,
+    szemelyi_szam VARCHAR(20) UNIQUE,
+    regisztracio DATE
+);
+
+CREATE TABLE jatek (
+    jatek_id INT AUTO_INCREMENT PRIMARY KEY,
+    datum DATETIME,
+    nyertes_szam INT,
+    szin VARCHAR(10)
+);
+
+CREATE TABLE tet (
+    tet_id INT AUTO_INCREMENT PRIMARY KEY,
+    jatekos_id INT,
+    jatek_id INT,
+    tet_tipus VARCHAR(50),
+    osszeg INT,
+    nyeremeny INT,
+    
+    FOREIGN KEY (jatekos_id) REFERENCES jatekos(jatekos_id),
+    FOREIGN KEY (jatek_id) REFERENCES jatek(jatek_id)
+);
+
+</code>
+</pre>
+                                </details>
+<h2>Minta Adatok Bevitele</h2>
+                                <details>
+                                        <summary><strong>Megtekintés:</strong></summary>
+        <pre style="background-color: #333; color: white; padding-left: 10px; 
+        border: 20px solid #444; border-radius: 10px;"><code>
+INSERT INTO jatekos (nev, szemelyi_szam, regisztracio)
+VALUES
+('Kiss Péter','123456AB','2025-01-01'),
+('Nagy Anna','987654CD','2025-02-10');
+
+INSERT INTO jatek (datum, nyertes_szam, szin)
+VALUES
+('2025-03-10 20:00:00',17,'fekete'),
+('2025-03-10 20:05:00',3,'piros');
+
+INSERT INTO tet (jatekos_id, jatek_id, tet_tipus, osszeg, nyeremeny)
+VALUES
+(1,1,'szam',1000,35000),
+(2,1,'piros',2000,0),
+(1,2,'fekete',1500,0);
+</code>
+</pre>
+                                </details>
+<h2>Játékos teljes profit lekérdezése</h2>
+                                <details>
+                                        <summary><strong>Megtekintés:</strong></summary>
+        <pre style="background-color: #333; color: white; padding-left: 10px; 
+        border: 20px solid #444; border-radius: 10px;"><code>
+SELECT 
+    j.nev,
+    SUM(t.nyeremeny - t.osszeg) AS profit
+FROM tet t
+JOIN jatekos j ON j.jatekos_id = t.jatekos_id
+GROUP BY j.nev;
+</code>
+</pre>
+                                </details>
+
+
+                                <h2>Legnagyobb nyeremény lekérdezése</h2>
+                                <details>
+                                        <summary><strong>Megtekintés:</strong></summary>
+        <pre style="background-color: #333; color: white; padding-left: 10px; 
+        border: 20px solid #444; border-radius: 10px;"><code>
+SELECT *
+FROM tet
+ORDER BY nyeremeny DESC
+LIMIT 1;
+</code>
+</pre>
+                                </details>
+
+
+                            </div>
             </div>
         </section>
     </main>
