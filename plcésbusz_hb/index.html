@@ -158,9 +158,9 @@
                 </div>
             </div>
             <p>
-                Ez az oldal a PLC és Iparibusz Rendszerek tantárgyban végzett projektjeim dokumentációja. 
-                Az alábbi projektek az iparági automatizálás különböző aspektusait mutatják be, 
-                beleértve a pneumatikus vezérlést, elosztott PLC hálózatokat és komplex ipari folyamatok szimulációját.
+                Ez az oldal a PLC Programozás és Iparibusz Rendszerek tantárgyban végzett projektem dokumentációja. 
+                Az alábbi projekt az iparági automatizálás különböző aspektusait mutatják be, 
+                beleértve a pneumatikus vezérlést, PLC hálózatokat és komplex ipari folyamatok szimulációját.
             </p>
         </section>
 
@@ -171,50 +171,47 @@
                 <h3>Feladat Leírás</h3>
                 <p>Ebben a feladatban egy parkolóház sorompóinak a vezérlését kell leprogramozni, amiben 
                     ha a jobb sorompó kinyílik, akkor pozitív irányba működtet egy pneumatikus dugattyút
-                    majd amikor a bal sorompó kinyílik, akkor negatív irányba működtet egy pneumatikus dugattyút
-                    . </p>
-                <img src="dugattyú.PNG" alt="Dugattyú vezérlés projekt" class="project-image">
-                <ul>
-                    <li>Pneumatikus vezérlőelemek kezelése</li>
-                    <li>PLC alapú vezérlés</li>
-                </ul>
+                    majd amikor a bal sorompó kinyílik, akkor negatív irányba működtet egy pneumatikus dugattyút.
+                 </p>
+                    <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1JDMyiDc7-p7tcfPaqAwGydgr1UD2jOit/preview" style="width: 100%; height: 480px; border: none; border-radius: 8px;" allow="autoplay"></iframe>
+                    <div class="video-info">
+                    </div>
+                </div>            
             </div>
 
-            <div class="project-container" id="kliens">
-                <h3>2. Kliens PLC Rendszer</h3>
-                <p><strong>Leírás:</strong> Elosztott PLC hálózatban a kliens oldal megvalósítása és konfigurációja.</p>
-                <img src="kliensplc.PNG" alt="Kliens PLC rendszer" class="project-image">
-                <ul>
-                    <li>Iparibusz kommunikáció alapjai</li>
-                    <li>Hálózat konfigurálás és csatlakozás</li>
-                    <li>Adat küldés és fogadás</li>
-                    <li>Szinkronizálás szerver oldallal</li>
-                </ul>
+            <div class="project-container">
+                <h3>Alap Feladat Leírása</h3>
+                <p>EasyVeep nevű program egyik gyakorló feladata a <strong>Parkolóház</strong> ezt a feladatot
+                egészítjük ki később pneumatikus vezérléssel, illetve modbusz kommunikációval.</p>
+                <img src="parkoloházfeladat.PNG" alt="Parkolóház feladat" class="project-image">
+            </div>
+            <div class="project-container">
+                <h3>Modbusz Kommunikáció</h3>
+                <p>Az alábbi képeken látható hogyan állítottam be a szerver majd a kliens PLC-t. Ezeket egy lokális 
+                    hálózaton értem el amit egy routerrel biztosítottam. A routert egy switchbe a switchből pedig
+                    a PLC-kbe kötöttem. 
+                </p> 
+                <h3>Szerver PLC-nek a beállításai/Programja</h3>
+                <img src="serverplc.PNG" alt="Server PLC" class="project-image">
+                <h3>Kliens PLC-nek a beállításai/Programja</h3>
+                <p>A <strong> Kliens PLC</strong> Beállításában használnom kellett egy órajelet nem
+                működött ezért a <strong> Network 2</strong>-be egy egyszerű villogtatással megoldottam
+                a problémát </p>
+                <img src="kliensplc.PNG" alt="Kliens PLC" class="project-image">
             </div>
 
-            <div class="project-container" id="parkoló">
-                <h3>3. Parkoló Ház Project</h3>
-                <p><strong>Leírás:</strong> Automatizált parkoló rendszer teljes szimulációja és vezérlése.</p>
-                <img src="parkoloházfeladat.PNG" alt="Parkoló ház feladat specifikáció" class="project-image">
-                <img src="parkolóházprogram.PNG" alt="Parkoló ház program logika" class="project-image">
-                <ul>
-                    <li>Bejáró és kijáró kapu vezérlés</li>
-                    <li>Hely detektor rendszer</li>
-                    <li>Elektronikus sorompó vezérlés</li>
-                    <li>Teljes rendszer szimulációja</li>
-                    <li>PLC létra diagramm logika</li>
-                </ul>
+            <div class="project-container">
+                <h3>Parkolóház alapkód</h3>
+                <p>Az EasyVeep-ben megadott feladat programja létra nyelvben. <br> Ebbe a kódba kellett
+                beleépítenem a pneumatikus munkahenger vezérlését </p>
+                <img src="parkolóházprogram.PNG" alt="Parkolóház Program" class="project-image">
+            </div>
+            <div class="project-container">
+                <h3> A Pneumatikus Henger Vezérlésének Kódja</h3>
+                <img src="dugattyú.PNG" alt="Pneumatikus Henger Program" class="project-image">
             </div>
 
-            <div class="project-container" id="szerver">
-                <h3>4. Szerver PLC Rendszer</h3>
-                <p><strong>Leírás:</strong> Elosztott PLC hálózatban a szerver oldal.</p>
-                <img src="serverplc.PNG" alt="Szerver PLC rendszer" class="project-image">
-                <ul>
-                    <li>Szerver szerepkör a hálózatban</li>
-                    <li>Adat feldolgozás és valós idejű szinkronizálás</li>
-                </ul>
-            </div>
         </section>
     </main>
 
