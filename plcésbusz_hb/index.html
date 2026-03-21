@@ -154,22 +154,25 @@
 
             <div class="project-container">
                 <h3>Alap Feladat Leírása</h3>
-                <p>EasyVeep nevű program egyik gyakorló feladata a <strong>Parkolóház</strong> ezt a feladatot
+                <p>EasyVeep nevű program egyik gyakorló feladata a <strong>Parkolóház</strong>, ezt a feladatot
                 egészítjük ki később pneumatikus vezérléssel, illetve modbusz kommunikációval.</p>
                 <img src="parkoloházfeladat.PNG" alt="Parkolóház feladat" class="project-image">
             </div>
             <div class="project-container">
                 <h3>Modbusz Kommunikáció</h3>
-                <p>Az alábbi képeken látható hogyan állítottam be a szerver majd a kliens PLC-t. Ezeket egy lokális 
-                    hálózaton értem el amit egy routerrel biztosítottam. A routert egy switchbe a switchből pedig
-                    a PLC-kbe kötöttem. 
+                <h4>A kommunikáció megvalósítása a kettő PLC között a Pneumatikus henger működtetéséhez.</h4>
+                <p>
+                    A kettő PLC között <strong>Modbusz TCP</strong> kommunikácót használtam 
+                </p>
+                <p>Az alábbi képeken látható hogy a szerver illetve a kliens PLC-ben milyen fb-ket paramétereztünk. A PLC-k egy helyi hálózaton 
+                    kapcsoltuk össze egy switch segítségével. A <strong>TIA PORTAL</strong>-al egy wifi router segítségével kapcsolódtam a PLC hálózathoz. 
                 </p> 
                 <h3>Szerver PLC-nek a beállításai/Programja</h3>
                 <img src="serverplc.PNG" alt="Server PLC" class="project-image">
                 <h3>Kliens PLC-nek a beállításai/Programja</h3>
-                <p>A <strong> Kliens PLC</strong> Beállításában használnom kellett egy órajelet nem
-                működött ezért a <strong> Network 2</strong>-be egy egyszerű villogtatással megoldottam
-                a problémát </p>
+                <p>
+                    A kliens PLC kezdeményezi a kommunikációt erre egy órajelre lesz szükség, ami a 2. Networkben látható.
+                </p>
                 <img src="kliensplc.PNG" alt="Kliens PLC" class="project-image">
             </div>
 
