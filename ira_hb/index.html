@@ -87,19 +87,31 @@
             border-left: 4px solid #d6172a;
         }
 
-        .placeholder {
-            text-align: center;
-            padding: 40px 20px;
-            color: #999;
-            font-style: italic;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
             color: #666;
             border-top: 1px solid #ddd;
             margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #d6172a;
+            color: white;
+            font-weight: bold;
         }
 
         @media (max-width: 768px) {
@@ -157,6 +169,51 @@
                 közül kiemelt jelentőségűek a relatív (inkrementális) és az abszolút útmérő
                 szenzorok. A két technológia
                 eltérő működési elven alapul, és különböző alkalmazási területeken használatos.</p>
+            <h3>Relatív Működési elv</h3>
+            <p>A relatív útmérő szenzorok az elmozdulás változását mérik egy referencia ponthoz képest. Ezek a szenzorok
+általában impulzusokat generálnak, amelyek száma arányos a megtett úttal.</p>
+            <h3>Abszolút Működési elv</h3>
+            <p>Az abszolút útmérő szenzorok minden pozícióhoz egyedi kódot rendelnek. Ez lehet például bináris vagy
+Gray-kód, amely lehetővé teszi a pontos helyzet meghatározását bármely pillanatban.</p>
+                <table>
+                        <tr>
+                            <th>Tulajdonság</th>
+                            <th>Relatív szenzor</th>
+                            <th>Abszolút szenzor</th>
+                        </tr>
+                        <tr>
+                            <td>Pozíció meghatározás</td>
+                            <td>Relatív</td>
+                            <td>Abszolút</td>
+                        </tr>
+                        <tr>
+                            <td>Indítás utáni állapot</td>
+                            <td>Ismeretlen</td>
+                            <td>Azonnal ismert</td>
+                        </tr>
+                        <tr>
+                            <td>Áramszünet hatása</td>
+                            <td>Pozíció elveszik</td>
+                            <td>Pozíció megmarad</td>
+                        </tr>
+                        <tr>
+                            <td>Költség</td>
+                            <td>Alacsony</td>
+                            <td>Magas</td>
+                        </tr>
+                        <tr>
+                            <td>Komplexitás</td>
+                            <td>Egyszerű</td>
+                            <td>Bonyolult</td>
+                        </tr>
+                        <tr>
+                            <td>Alkalmazási terület</td>
+                            <td>CNC, enkóderek</td>
+                            <td>Robotika, automatizálás</td>
+                        </tr>
+                </table>
+
+            
         </section>
     <footer>
         <p>&copy; 2026 Portfólió - Irányítástechnika</p>
